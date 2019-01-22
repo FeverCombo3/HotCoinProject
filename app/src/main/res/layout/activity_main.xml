@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <includew
+            <include
                 android:id="@+id/kline_top"
                 layout="@layout/layout_kline_toolbar" />
 
