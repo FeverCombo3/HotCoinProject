@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yjq.hotcoin.view.RecycerScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context="com.yjq.hotcoin.KlineActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <includew
+                android:id="@+id/kline_top"
+                layout="@layout/layout_kline_toolbar" />
+
+            <com.yjq.hotcoin.kline.KlineView
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/kline_top"
+                android:id="@+id/klineView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@color/dark_bg"
+                app:border_line_width="1"
+                app:first_weight="4"
+                app:third_weight = "1"
+                app:second_weight="1" />
+
+            <com.yjq.hotcoin.view.KlineToolBar
+                android:layout_below="@+id/kline_top"
+                android:id="@+id/kline_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/kline_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                app:indicatorName="BallSpinFadeLoaderIndicator" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/kline_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_bg"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/kline_blue_choose"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/kline_blue_choose"
+            app:tabTextColor="@color/kline_blue">
+
+        </android.support.design.widget.TabLayout>
+
+        <com.yjq.hotcoin.view.WrapContentHeightViewPager
+            android:id="@+id/kline_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_bg">
+
+        </com.yjq.hotcoin.view.WrapContentHeightViewPager>
+    </LinearLayout>
+
+</com.yjq.hotcoin.view.RecycerScrollView>

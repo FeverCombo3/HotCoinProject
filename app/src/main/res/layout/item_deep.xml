@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_bg"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_num_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/kline_blue"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tv_amount_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/color_white"
+        tools:text="200.7978" />
+
+    <TextView
+        android:id="@+id/tv_price_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/mid"
+        android:textColor="@color/kline_green"
+        tools:text="11.7978" />
+
+    <View
+        android:id="@+id/mid"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tv_price_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/mid"
+        android:textColor="@color/kline_red"
+        tools:text="8.7978" />
+
+    <TextView
+        android:id="@+id/tv_num_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/kline_blue"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tv_amount_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_white"
+        tools:text="200.7978" />
+</RelativeLayout>

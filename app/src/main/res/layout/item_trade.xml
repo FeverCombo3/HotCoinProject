@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_bg"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_trade_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white"
+        tools:text="11:42:51" />
+
+    <TextView
+        android:id="@+id/tv_trade_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="240dp"
+        android:textColor="@color/kline_green"
+        tools:text="买入" />
+
+
+    <TextView
+        android:id="@+id/tv_trade_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="85dp"
+        android:textColor="@color/color_white"
+        tools:text="4.7500" />
+
+    <TextView
+        android:id="@+id/tv_trade_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_white"
+        tools:text="999.00" />
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:orientation="vertical"
+    tools:context="com.yjq.hotcoin.KlineHActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_h_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/dark_bg">
+
+        <TextView
+            android:id="@+id/tv_h_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            tools:text="BTC/USDT" />
+
+        <TextView
+            android:id="@+id/tv_h_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_h_symbol"
+            android:textColor="@color/kline_green"
+            android:textStyle="bold"
+            tools:text="6595.14" />
+
+        <TextView
+            android:id="@+id/tv_h_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/tv_h_price"
+            android:textColor="@color/kline_green"
+            tools:text="+1.03%" />
+
+        <ImageView
+            android:id="@+id/iv_h_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12sp"
+            android:src="@mipmap/icon_close" />
+
+        <TextView
+            android:id="@+id/tv_h_24vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_h_close"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            tools:text="10218" />
+
+        <TextView
+            android:id="@+id/tv_24vol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/tv_h_24vol"
+            android:text="24H量"
+            android:textColor="@color/kline_blue"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_h_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tv_24vol"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            tools:text="6555.60" />
+
+        <TextView
+            android:id="@+id/tv_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/tv_h_low"
+            android:text="低"
+            android:textColor="@color/kline_blue"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_h_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tv_low"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            tools:text="6754.24" />
+
+        <TextView
+            android:id="@+id/tv_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/tv_h_high"
+            android:text="高"
+            android:textColor="@color/kline_blue"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_h_top"
+        android:layout_marginBottom="41dp"
+        android:layout_marginTop="3dp">
+
+        <com.yjq.hotcoin.kline.KlineView
+            android:id="@+id/klineView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/vertical_bar"
+            android:background="@color/dark_bg"
+            app:border_line_width="1"
+            app:first_weight="4"
+            app:second_weight="1"
+            app:third_weight="1" />
+
+        <com.yjq.hotcoin.view.IndicatorVerticalBar
+            android:id="@+id/vertical_bar"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/kline_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:indicatorName="BallSpinFadeLoaderIndicator" />
+    </RelativeLayout>
+
+    <com.yjq.hotcoin.view.CycleLandscapeBar
+        android:id="@+id/land_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
