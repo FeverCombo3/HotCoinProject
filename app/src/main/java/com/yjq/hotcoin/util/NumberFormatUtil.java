@@ -1,6 +1,7 @@
 package com.yjq.hotcoin.util;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -13,10 +14,15 @@ import java.util.Locale;
 public class NumberFormatUtil {
 
     /**
-     * 将数据保留四位小数
+     * 将数据保留小数
      */
-    public static String getFourDecimal(double num) {
-        DecimalFormat dFormat=new DecimalFormat("0.0000");
+    public static String getDecimalByNum(double num) {
+        DecimalFormat dFormat;
+        if(num > 0){
+            dFormat=new DecimalFormat("0.0000");
+        }else {
+            dFormat=new DecimalFormat("0.########");
+        }
         return dFormat.format(num);
     }
 
@@ -26,6 +32,19 @@ public class NumberFormatUtil {
     public static String getTwoDecimal(double num) {
         DecimalFormat dFormat=new DecimalFormat("0.00");
         return dFormat.format(num);
+    }
+
+    /**
+     * 除usdt交易对保留8位小数
+     */
+    public static double get8Decimal(double num) {
+        NumberFormat nf = NumberFormat.getInstance();
+        //设置保留多少位小数
+        nf.setMaximumFractionDigits(8);
+        // 取消科学计数法
+        nf.setGroupingUsed(false);
+        //返回结果
+        return Double.parseDouble(nf.format(num));
     }
 
     /**

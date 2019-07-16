@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
@@ -26,7 +25,6 @@ import com.yjq.hotcoin.util.NumberFormatUtil;
 import com.yjq.hotcoin.view.WrapContentHeightViewPager;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -145,7 +143,7 @@ public class TradeFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull TradeHolder holder, int position) {
             holder.tradeTime.setText(DateUtil.millsToDate(trades.get(position).ts));
-            holder.tradePrice.setText(NumberFormatUtil.getFourDecimal(trades.get(position).price));
+            holder.tradePrice.setText(NumberFormatUtil.getDecimalByNum(trades.get(position).price));
             holder.tradeAmount.setText(NumberFormatUtil.getTwoDecimal(trades.get(position).amount));
             if(trades.get(position).direction.equals("buy")){
                 holder.tradeDir.setText("买入");

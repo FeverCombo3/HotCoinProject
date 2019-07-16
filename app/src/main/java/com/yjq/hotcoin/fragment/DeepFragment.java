@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
-import com.yjq.hotcoin.callback.JsonCallBack;
 import com.yjq.hotcoin.R;
 import com.yjq.hotcoin.bean.Result2;
 import com.yjq.hotcoin.bean.Tick;
@@ -22,7 +21,6 @@ import com.yjq.hotcoin.callback.JsonCallBack2;
 import com.yjq.hotcoin.util.NumberFormatUtil;
 import com.yjq.hotcoin.view.WrapContentHeightViewPager;
 
-import java.nio.MappedByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -126,10 +124,10 @@ public class DeepFragment extends Fragment {
 
             holder.numLeft.setText((position + 1) + "");
             holder.numRight.setText((position + 1) + "");
-            holder.pricebuy.setText(NumberFormatUtil.getFourDecimal(bid));
-            holder.amountbuy.setText(NumberFormatUtil.getFourDecimal(bidamount));
-            holder.pricesell.setText(NumberFormatUtil.getFourDecimal(ask));
-            holder.amountsell.setText(NumberFormatUtil.getFourDecimal(askamount));
+            holder.pricebuy.setText(NumberFormatUtil.getDecimalByNum(bid));
+            holder.amountbuy.setText(NumberFormatUtil.getDecimalByNum(bidamount));
+            holder.pricesell.setText(NumberFormatUtil.getDecimalByNum(ask));
+            holder.amountsell.setText(NumberFormatUtil.getDecimalByNum(askamount));
         }
 
         @Override

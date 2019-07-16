@@ -226,7 +226,7 @@ public class KlineActivity extends AppCompatActivity implements KlineToolBar.OnK
      * @param period K线类型 (1min, 5min, 15min, 30min, 60min, 1day, 1mon, 1week, 1year)
      * @param size   获取数量
      */
-    private void getHuoCoinKlineData(String symbol, String period, String size) {
+    private void getHuoCoinKlineData(final String symbol, String period, String size) {
         OkGo.<Result<List<CandleData>>>get("https://api.huobi.pro/market/history/kline")
                 .tag(this)
                 .params("period", period)
@@ -265,7 +265,7 @@ public class KlineActivity extends AppCompatActivity implements KlineToolBar.OnK
                                 mRate.setText(rate + "%");
                             }
 
-                            mNowPrice.setText(mData.get(mData.size() - 1).close + "");
+                            mNowPrice.setText(NumberFormatUtil.getDecimalByNum(mData.get(mData.size() - 1).close));
                             mCnY.setText("≈" + NumberFormatUtil.transToCny(mData.get(mData.size() - 1).close) + "CNY");
 
                             for (Indicator indicator : indicators) {
@@ -297,16 +297,16 @@ public class KlineActivity extends AppCompatActivity implements KlineToolBar.OnK
      * @param symbol 交易对 (btcusdt, bchbtc, rcneth ...)
      */
     private void getHuoCoin24Trade(String symbol){
-        OkGo.<Result2<TfTrade>>get("https://api.huobipro.com/market/detail")
+        OkGo.<Result2<TfTrade>>get("https://api.huobi.pro/market/detail")
                 .params("symbol",symbol)
                 .execute(new JsonCallBack2<Result2<TfTrade>>() {
                     @Override
                     public void onSuccess(Response<Result2<TfTrade>> response) {
                         TfTrade tfTrade = response.body().tick;
                         if(tfTrade != null){
-                            mHighPrice.setText(tfTrade.high + "");
-                            mLowPrice.setText(tfTrade.low + "");
-                            m24Amount.setText(tfTrade.vol + "");
+                            mHighPrice.setText(NumberFormatUtil.getDecimalByNum(tfTrade.high));
+                            mLowPrice.setText(NumberFormatUtil.getDecimalByNum(tfTrade.low));
+                            m24Amount.setText(NumberFormatUtil.getDecimalByNum(tfTrade.vol));
                         }
                     }
                 });

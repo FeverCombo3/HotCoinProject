@@ -4,10 +4,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.PathEffect;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Build;
@@ -439,23 +437,23 @@ public class KlineView extends ScrollScaleView {
             float tx = getTextHeight("开",mCrossTextPaint);
             float hR = padding + rect1_T + tx;
             canvas.drawText("开",rectF2_L + padding,hR,mCrossTextPaint);
-            canvas.drawText(NumberFormatUtil.getFourDecimal(candelData.open),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getFourDecimal(candelData.open)) - padding,hR,mCrossTextPaint);
+            canvas.drawText(NumberFormatUtil.getDecimalByNum(candelData.open),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getDecimalByNum(candelData.open)) - padding,hR,mCrossTextPaint);
 
             hR = hR + tx + padding;
             canvas.drawText("高",rectF2_L + padding,hR,mCrossTextPaint);
-            canvas.drawText(NumberFormatUtil.getFourDecimal(candelData.high),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getFourDecimal(candelData.high)) - padding,hR,mCrossTextPaint);
+            canvas.drawText(NumberFormatUtil.getDecimalByNum(candelData.high),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getDecimalByNum(candelData.high)) - padding,hR,mCrossTextPaint);
 
             hR = hR + tx + padding;
             canvas.drawText("低",rectF2_L + padding,hR,mCrossTextPaint);
-            canvas.drawText(NumberFormatUtil.getFourDecimal(candelData.low),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getFourDecimal(candelData.low)) - padding,hR,mCrossTextPaint);
+            canvas.drawText(NumberFormatUtil.getDecimalByNum(candelData.low),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getDecimalByNum(candelData.low)) - padding,hR,mCrossTextPaint);
 
             hR = hR + tx + padding;
             canvas.drawText("收",rectF2_L + padding,hR,mCrossTextPaint);
-            canvas.drawText(NumberFormatUtil.getFourDecimal(candelData.close),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getFourDecimal(candelData.close)) - padding,hR,mCrossTextPaint);
+            canvas.drawText(NumberFormatUtil.getDecimalByNum(candelData.close),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getDecimalByNum(candelData.close)) - padding,hR,mCrossTextPaint);
 
             hR = hR + tx + padding;
             canvas.drawText("成交量",rectF2_L + padding,hR,mCrossTextPaint);
-            canvas.drawText(NumberFormatUtil.getFourDecimal(candelData.amount),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getFourDecimal(candelData.amount)) - padding,hR,mCrossTextPaint);
+            canvas.drawText(NumberFormatUtil.getDecimalByNum(candelData.amount),rectF2_R - mCrossTextPaint.measureText(NumberFormatUtil.getDecimalByNum(candelData.amount)) - padding,hR,mCrossTextPaint);
 
             hR = hR + tx + padding;
             canvas.drawText("日期",rectF2_L + padding,hR,mCrossTextPaint);
@@ -663,7 +661,7 @@ public class KlineView extends ScrollScaleView {
                     }
                 }
                 double abs = Math.abs(mMainMaxValue - mMainMinValue);
-                if (abs < 0.01) {
+                if (abs < 0.00000001) {
                     mMainMaxValue = mMainMaxValue + 0.1f;
                     mMainMinValue = mMainMinValue - 0.1f;
                 }
