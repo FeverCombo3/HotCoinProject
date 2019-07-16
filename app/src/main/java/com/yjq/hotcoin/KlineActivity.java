@@ -227,7 +227,7 @@ public class KlineActivity extends AppCompatActivity implements KlineToolBar.OnK
      * @param size   获取数量
      */
     private void getHuoCoinKlineData(String symbol, String period, String size) {
-        OkGo.<Result<List<CandleData>>>get("https://api.huobipro.com/market/history/kline")
+        OkGo.<Result<List<CandleData>>>get("https://api.huobi.pro/market/history/kline")
                 .tag(this)
                 .params("period", period)
                 .params("size", size)

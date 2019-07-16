@@ -83,7 +83,7 @@ public class DeepFragment extends Fragment {
      * @param type Depth类型 (step0, step1, step2, step3, step4, step5（合并深度0-5）；step0时，不合并深度)
      */
     private void getDeepData(String symbol,String type){
-        OkGo.<Result2<Tick>>get("https://api.huobipro.com/market/depth")
+        OkGo.<Result2<Tick>>get("https://api.huobi.pro/market/depth")
                 .params("symbol",symbol)
                 .params("type",type)
                 .execute(new JsonCallBack2<Result2<Tick>>() {

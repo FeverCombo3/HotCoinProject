@@ -89,7 +89,7 @@ public class TradeFragment extends Fragment {
      * @param size 交易记录数量 ([1, 2000])
      */
     private void getTradeData(String symbol,String size){
-        OkGo.<Result<List<TradeData>>>get("https://api.huobipro.com/market/history/trade")
+        OkGo.<Result<List<TradeData>>>get("https://api.huobi.pro/market/history/trade")
                 .params("symbol",symbol)
                 .params("size",size)
                 .execute(new JsonCallBack<Result<List<TradeData>>>() {

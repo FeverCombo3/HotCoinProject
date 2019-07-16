@@ -67,7 +67,7 @@ public class SymbolActivity extends AppCompatActivity implements SwipeRefreshLay
      * 火币行情API(获取所有的交易对)
      */
     private void getAllSymbols(){
-        OkGo.<String>get("https://api.huobipro.com/v1/common/symbols")
+        OkGo.<String>get("https://api.huobi.pro/v1/common/symbols")
                 .execute(new StringCallback() {
 
                     @Override
@@ -95,8 +95,6 @@ public class SymbolActivity extends AppCompatActivity implements SwipeRefreshLay
                                     symbol.amount_precision = ob.get("amount-precision").getAsString();
                                     symbol.symbol = symbol.base_currency + symbol.quote_currency;
                                     mSymbolList.add(symbol);
-                                }else {
-                                    break;
                                 }
                             }
                             mAdapter.notifyDataSetChanged();
