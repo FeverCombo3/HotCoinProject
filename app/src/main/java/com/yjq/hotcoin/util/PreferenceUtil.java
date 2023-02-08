@@ -3,7 +3,7 @@ package com.yjq.hotcoin.util;
 import android.content.Context;
 
 import com.yjq.hotcoin.MyApp;
-import com.yjq.hotcoin.indicator.Indicator;
+import com.yjq.hotcoin.indicator.base.Indicator;
 
 /**
  * Created by yjq

@@ -1,4 +1,4 @@
-package com.yjq.hotcoin.indicator;
+package com.yjq.hotcoin.indicator.base;
 
 import android.content.Context;
 import android.graphics.Canvas;

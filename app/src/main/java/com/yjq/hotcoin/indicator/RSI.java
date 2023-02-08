@@ -7,6 +7,8 @@ import android.graphics.Path;
 
 import com.yjq.hotcoin.R;
 import com.yjq.hotcoin.bean.CandleData;
+import com.yjq.hotcoin.indicator.base.Indicator;
+import com.yjq.hotcoin.indicator.base.KLineParam;
 import com.yjq.hotcoin.util.DisplayUtils;
 import com.yjq.hotcoin.util.UIHelper;
 

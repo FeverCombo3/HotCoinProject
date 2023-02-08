@@ -12,14 +12,13 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 import com.yjq.hotcoin.R;
 import com.yjq.hotcoin.bean.CandleData;
-import com.yjq.hotcoin.indicator.Indicator;
-import com.yjq.hotcoin.indicator.KLineParam;
+import com.yjq.hotcoin.indicator.base.Indicator;
+import com.yjq.hotcoin.indicator.base.KLineParam;
 import com.yjq.hotcoin.util.DisplayUtils;
 import com.yjq.hotcoin.util.NumberFormatUtil;
 import com.yjq.hotcoin.util.PreferenceUtil;

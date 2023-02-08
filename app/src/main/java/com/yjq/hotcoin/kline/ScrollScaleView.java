@@ -288,7 +288,7 @@ public abstract class ScrollScaleView extends View implements  GestureDetector.O
             case MotionEvent.ACTION_MOVE: {
                 int deltaX = x - mLastXIntercept;
                 int deltaY = y - mLastYIntercept;
-                //如果是左右滑动
+                //如果是上下滑动
                 if (Math.abs(deltaX) < Math.abs(deltaY)&&Math.abs(deltaY)>20) {
                     getParent().requestDisallowInterceptTouchEvent(false);
                 }

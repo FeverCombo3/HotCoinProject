@@ -19,7 +19,7 @@ import com.yjq.hotcoin.bean.Result2;
 import com.yjq.hotcoin.bean.TfTrade;
 import com.yjq.hotcoin.callback.JsonCallBack;
 import com.yjq.hotcoin.callback.JsonCallBack2;
-import com.yjq.hotcoin.indicator.Indicator;
+import com.yjq.hotcoin.indicator.base.Indicator;
 import com.yjq.hotcoin.indicator.Kline;
 import com.yjq.hotcoin.indicator.VOL;
 import com.yjq.hotcoin.kline.KlineView;

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.zhouwei.library.CustomPopWindow;
 import com.yjq.hotcoin.R;
 import com.yjq.hotcoin.indicator.BOLL;
-import com.yjq.hotcoin.indicator.Indicator;
+import com.yjq.hotcoin.indicator.base.Indicator;
 import com.yjq.hotcoin.indicator.KDJ;
 import com.yjq.hotcoin.indicator.MA;
 import com.yjq.hotcoin.indicator.MACD;
@@ -27,13 +25,10 @@ import com.yjq.hotcoin.util.DisplayUtils;
 import com.yjq.hotcoin.util.PreferenceUtil;
 
 import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by yjq

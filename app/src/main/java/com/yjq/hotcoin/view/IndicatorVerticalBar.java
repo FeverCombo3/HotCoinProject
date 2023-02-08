@@ -6,13 +6,12 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.yjq.hotcoin.R;
 import com.yjq.hotcoin.indicator.BOLL;
-import com.yjq.hotcoin.indicator.Indicator;
+import com.yjq.hotcoin.indicator.base.Indicator;
 import com.yjq.hotcoin.indicator.KDJ;
 import com.yjq.hotcoin.indicator.MA;
 import com.yjq.hotcoin.indicator.MACD;

@@ -10,6 +10,8 @@ import android.graphics.PathEffect;
 
 import com.yjq.hotcoin.R;
 import com.yjq.hotcoin.bean.CandleData;
+import com.yjq.hotcoin.indicator.base.Indicator;
+import com.yjq.hotcoin.indicator.base.KLineParam;
 import com.yjq.hotcoin.util.DisplayUtils;
 import com.yjq.hotcoin.util.UIHelper;
 
@@ -22,7 +24,7 @@ import java.util.List;
  *
  */
 
-public class ZLCP extends Indicator{
+public class ZLCP extends Indicator {
     List<Float>WZ;
     List<Float>FJ;
     private Paint textPaint;

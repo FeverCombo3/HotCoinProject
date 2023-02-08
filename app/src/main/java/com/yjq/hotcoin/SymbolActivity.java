@@ -1,5 +1,6 @@
 package com.yjq.hotcoin;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -78,6 +79,7 @@ public class SymbolActivity extends AppCompatActivity implements SwipeRefreshLay
 
                     @Override
                     public void onSuccess(Response<String> response) {
+                        Log.e("coin","onSuccess()");
                         String result = response.body();
                         JsonObject object =  new JsonParser().parse(result).getAsJsonObject();
                         String status = object.get("status").getAsString();
@@ -104,6 +106,7 @@ public class SymbolActivity extends AppCompatActivity implements SwipeRefreshLay
                     @Override
                     public void onError(Response<String> response) {
                         super.onError(response);
+                        Log.e("coin","onError()");
                         Toast.makeText(SymbolActivity.this,"网络发生错误或需要翻墙！",Toast.LENGTH_SHORT).show();
                         mSr.setRefreshing(false);
                     }
@@ -140,7 +143,7 @@ public class SymbolActivity extends AppCompatActivity implements SwipeRefreshLay
         }
 
         @Override
-        public void onBindViewHolder(SymbolHolder holder, final int position) {
+        public void onBindViewHolder(SymbolHolder holder, @SuppressLint("RecyclerView") final int position) {
             holder.base.setText(mList.get(position).base_currency.toUpperCase());
             holder.quote.setText(mList.get(position).quote_currency.toUpperCase());
             holder.card.setOnClickListener(new View.OnClickListener() {

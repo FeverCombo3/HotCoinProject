@@ -3,7 +3,7 @@ package com.yjq.hotcoin.util;
 import android.content.Context;
 
 import com.yjq.hotcoin.indicator.BOLL;
-import com.yjq.hotcoin.indicator.Indicator;
+import com.yjq.hotcoin.indicator.base.Indicator;
 import com.yjq.hotcoin.indicator.KDJ;
 import com.yjq.hotcoin.indicator.Kline;
 import com.yjq.hotcoin.indicator.MA;

@@ -1,4 +1,4 @@
-package com.yjq.hotcoin.indicator;
+package com.yjq.hotcoin.indicator.base;
 
 
 import com.yjq.hotcoin.bean.CandleData;

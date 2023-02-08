@@ -29,7 +29,7 @@ import com.yjq.hotcoin.callback.JsonCallBack2;
 import com.yjq.hotcoin.fragment.DeepFragment;
 import com.yjq.hotcoin.fragment.IntroFragment;
 import com.yjq.hotcoin.fragment.TradeFragment;
-import com.yjq.hotcoin.indicator.Indicator;
+import com.yjq.hotcoin.indicator.base.Indicator;
 import com.yjq.hotcoin.indicator.Kline;
 import com.yjq.hotcoin.indicator.VOL;
 import com.yjq.hotcoin.kline.KlineView;
